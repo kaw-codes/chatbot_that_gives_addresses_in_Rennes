@@ -1,0 +1,92 @@
+@startuml Avatar
+
+' Création des interfaces
+
+interface AnalyseTrait{
+	analyser(phrase: String): List[(String,String)]
+	analyserChoix(requete: String): Option[Int]
+	politeTest_Bonjour(phrase: String): (Boolean, String)
+	politeTest_OnlyBonjour(phrase: String): (Boolean, String)
+	getDicoLangue(): List[String]
+	getDicoLangue(lang: Int): List[String]
+	detecLangue(phrase: String): (Boolean, Int, Int)
+}
+
+interface BDDTrait{
+	removeAccents(str: String): String 
+	removeLiaisonAccentsWords(str: String): String 
+	chercherAdresse(str:String): String
+	chercherLieu(mot: String): String
+	createDicoSalutations(langueActuelleStr: String, langueActuelle: Int): List[String] 
+	langueDuMot(mot: String): String 
+	getDicoExpr(): List[List[String]]
+	getDicoPRN(): List[List[String]]
+	recuplieuxBases() : List[String]
+}
+
+interface ConstructionTrait{
+	construire(requete: String): List[String]
+	construireConfirmation(requete: String, langueActuelle: Int): String
+}
+
+interface LangueTrait{
+	langueSuivante(): Unit
+	reinitLangue():Unit
+ 	getLangueActuelle(): Int
+  	setLangueActuelle(langue: String): Unit
+  	getLangueQuestion(): String
+  	langueStringToInt(langue: String): Int
+	langueIntToString(langue: Int): String
+}
+
+interface MachineDialogue {
+	ask(s: String): List[String]
+	reinit(): Unit
+	getLangueActuelle (): Int 
+	test(l: List[String]): List[String]
+}
+
+interface FautesTrait{
+	correction(mots: List[String], modeles: List[String]): List[String]
+}
+
+interface VoiceTrait{
+	ajouteMessage(message: String, langue: Int): Unit
+}
+
+
+' Création des objects
+
+' Objet issu du projet Robot Web 
+class AnalyseHtml <<(O,LightGreen)>> 
+
+class AnalyseImpl <<(O,Orange)>>
+class BDDImpl <<(O,Orange)>>
+class ConstructionImpl <<(O,Orange)>>
+class InterfaceGraphique <<(O,Orange)>>
+class LangueImpl <<(O,Orange)>>
+class MachineImpl <<(O,Orange)>>
+class FautesImpl <<(O,Orange)>>
+class Voice <<(O,Orange)>>
+
+' Relations d'héritage
+MachineImpl -|> MachineDialogue
+BDDTrait <|-  BDDImpl
+ConstructionImpl -|>  ConstructionTrait
+AnalyseImpl -|>  AnalyseTrait
+FautesImpl -|> FautesTrait
+LangueTrait <|-  LangueImpl
+Voice -|> VoiceTrait
+
+' Relations d'utilisation
+MachineDialogue --> ConstructionTrait
+MachineDialogue <- InterfaceGraphique
+VoiceTrait <-- InterfaceGraphique
+ConstructionTrait --> AnalyseTrait
+AnalyseTrait -> LangueTrait
+AnalyseTrait --> FautesTrait
+AnalyseTrait --> BDDTrait
+AnalyseHtml <- AnalyseTrait
+MachineDialogue --> LangueTrait
+
+@enduml

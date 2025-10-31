@@ -1,0 +1,10 @@
+.bloop
+.vscode
+.bsp
+.json
+.log
+.db
+.metals
+log
+project
+target
