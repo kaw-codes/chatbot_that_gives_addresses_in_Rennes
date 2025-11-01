@@ -20,15 +20,15 @@ Elle a été écrite en Scala, dans le cadre du cours Génie Logiciel en 2e ann�
 
 - Regarder si la version 17 de Java est disponible sur la machine :
 
-  update-java-alternatives --list
+  `update-java-alternatives --list`
 
 - Si elle n'y est pas, installer la version 17 de Java :
 
-  sudo apt install openjdk-17-jdk
+  `sudo apt install openjdk-17-jdk`
 
 - Enable Java 17 :
 
-  sudo update-alternatives --config java
+  `sudo update-alternatives --config java`
   
 - Installer sbt : https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html
 
@@ -36,13 +36,13 @@ Elle a été écrite en Scala, dans le cadre du cours Génie Logiciel en 2e ann�
 
 - à la racine, exécuter :
 
-  sbt
+  `sbt`
 
 - puis :
   
-  compile
+  `compile`
 
-  run
+  `run`
 
 - vous aurez le choix entre 6 fonctionnalités.
 - choisissez la 6e pour dialoguer avec l'Avatar.
