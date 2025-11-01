@@ -8,7 +8,7 @@ Chatbot interactif, voici ses fonctionnalités :
 - Le bot est capable de politesse : dites-lui bonjour !
 - Même avec quelques fautes d'orthographe, il comprendra votre requête.
 - Il peut parler 5 langues : Français, Anglais, Espagnol, Allemand et Italien.
-- Si une requête peut contenir plusieurs réponses (exemple : "piscine"), il vous proposera toutes les lieux possibles correspondant.
+- Si une requête peut contenir plusieurs réponses (exemple : "piscine"), il vous proposera tous les lieux possibles correspondant.
 - Recherche de restaurant par interrogation du site "Linternaute".
 - Il peut  aussi vous répondre à l'oral ! Pour cela, activez sa voix.
 
