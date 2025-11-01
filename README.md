@@ -16,9 +16,24 @@ L'application a été développée en groupe de 8 étudiants : la Team BACCHUS.
 
 Elle a été écrite en Scala, dans le cadre du cours Génie Logiciel en 2e année de Licence Informatique  à l'ISTIC, Université de Rennes (note du projet : 18/20).
 
+## Installation
+
+- Regarder si la version 17 de Java est disponible sur la machine :
+
+  update-java-alternatives --list
+
+- Si elle n'y est pas, installer la version 17 de Java :
+
+  sudo apt install openjdk-17-jdk
+
+- Enable Java 17 :
+
+  sudo update-alternatives --config java
+  
+- Installer sbt : https://www.scala-sbt.org/1.x/docs/Installing-sbt-on-Linux.html
+
 ## Usage
 
-- avoir une version de Java à jour.
 - à la racine, exécuter :
 
   sbt
