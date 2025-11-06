@@ -49,4 +49,4 @@ Elle a été écrite en Scala, dans le cadre du cours Génie Logiciel en 2e ann�
 
 ## Ma contribution
 
-Ma contribution portant sur la partie `analyse_phrase`, je me suis occupé du traitement de la requête de l'utilisateur pour renvoyer des couples (lieu, adresse) correspondant. Ils seront ensuite traité par le module `construction_result`, dont je me suis aussi occupé, chargé de construire la réponse de l'Avatar.
+Ma contribution portant sur la partie `analyse_phrase`, je me suis occupé du traitement de la requête de l'utilisateur pour renvoyer des couples (lieu, adresse) correspondant. Ils seront ensuite traité par le module `construction_result`, dont je me suis aussi occupé, chargé de construire la réponse de l'Avatar, et d'implémenter des tests unitaires pour mes parties.
